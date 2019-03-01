@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Robofriends
+
+This is a simple React app that makes use of [Robohash](https://robohash.org) to create a list of procedurally generated robot images and then searches through the list.
+
 ## Available Scripts
 
 In the project directory, you can run:
