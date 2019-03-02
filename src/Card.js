@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Card = (props) => {
     return (
-        <div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'> {/* tachyons styles */}
+        <div className='tc bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5'> {/* tachyons styles */}
             <img alt='robot' src={`https://www.robohash.org/${props.id}?size=200x200`} />
             <div className='robotInfo'>
                 <h2>{props.name}</h2>

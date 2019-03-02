@@ -13,7 +13,7 @@ export const robots = [
     },
     {
       id: 3,
-      name: 'Peach Unicorn',
+      name: 'Pruney Unicorn',
       username: 'peach',
       email: 'celia@bestmail.net'
     },
