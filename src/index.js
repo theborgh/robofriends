@@ -4,9 +4,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
 import './index.css';
-// inside robots.js, I'm using export, not export default (for 1 item)
-// so I need to destructure { robots } when importing it
-import { robots } from './robots'; 
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
