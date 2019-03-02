@@ -13,7 +13,7 @@ export const robots = [
     },
     {
       id: 3,
-      name: 'Peach Cecilia',
+      name: 'Peach Unicorn',
       username: 'peach',
       email: 'celia@bestmail.net'
     },
@@ -25,31 +25,31 @@ export const robots = [
     },
     {
       id: 5,
-      name: 'Glottis Dietrich',
+      name: 'Lieutenant Antenna',
       username: 'Kamren',
       email: 'Lucio_Hettinger@annie.ca'
     },
     {
       id: 6,
-      name: 'Mrs. Dennis Schulist',
+      name: 'Openmouth Surgerybot',
       username: 'Leopoldo_Corkery',
       email: 'Karley_Dach@jasper.info'
     },
     {
       id: 7,
-      name: 'Kurtis Weissnat',
+      name: 'Radar Boy',
       username: 'Elwyn.Skiles',
       email: 'Telly.Hoeger@billy.biz'
     },
     {
       id: 8,
-      name: 'Nicholas Runolfsdottir V',
+      name: 'Infinite Looper III(b)',
       username: 'Maxime_Nienow',
       email: 'Sherwood@rosamond.me'
     },
     {
       id: 9,
-      name: 'Glenna Reichert',
+      name: 'UTF-8',
       username: 'Delphine',
       email: 'Chaim_McDermott@dana.io'
     },
