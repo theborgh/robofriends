@@ -3,39 +3,33 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
-import { setSearchField } from '../redux_actions';
+import { setSearchField, requestRobots } from '../redux_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-    searchField: state.searchField
+    searchField: state.searchRobots.searchField,
+    robots: state.requestRobots.robots,
+    isPending: state.requestRobots.isPending,
+    error: state.requestRobots.error
 })
 
 const mapDispatchToProps = dispatch => ({
-    onSearchBoxChange: (event) => dispatch(setSearchField(event.target.value))
+    onSearchBoxChange: (event) => dispatch(setSearchField(event.target.value)),
+    onRequestRobots: () => dispatch(requestRobots()) // functions get handled by redux-thunk
 })
 
 class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            robots: [],
-            
-        };
-    }
 
     componentDidMount() {
-        // fetch() is a method of the Window object
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(users => { this.setState({ robots: users }) });
+        this.props.onRequestRobots();
     }
 
     filterList = () => {
-        return this.state.robots.filter(r => r.name.toLowerCase().includes(this.props.searchField.toLowerCase()));
+        return this.props.robots.filter(r => r.name.toLowerCase().includes(this.props.searchField.toLowerCase()));
     }
 
     render() {
-        if (this.state.robots.length === 0) {
+        if (this.props.isPending) {
             return <h1>Loading...</h1>;
         } else {
             return (
