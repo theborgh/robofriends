@@ -23,18 +23,12 @@ class App extends Component {
         };
     }
 
-    // executes after render()
     componentDidMount() {
         // fetch() is a method of the Window object
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(users => { this.setState({ robots: users }) });
     }
-
-    // This is an arbitrary method name to handle a SearchBox event
-    // It uses the arrow function syntax so that the THIS keyword will reference App instead of 
-    // the object where the event originated (which would happen with the normal syntax)
-
 
     filterList = () => {
         return this.state.robots.filter(r => r.name.toLowerCase().includes(this.props.searchField.toLowerCase()));
